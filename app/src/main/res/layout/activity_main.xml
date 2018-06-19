@@ -4,6 +4,98 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:background="@drawable/splashscreenbackground"
+    tools:context=".MainActivity"
+    tools:layout_editor_absoluteY="81dp">
 
+    <Button
+        android:id="@+id/btnElectronics"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Electronics"
+        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="MACHINERY MONITORING SYSTEM"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnFloatingCraftsSection"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Floating Craft Section"
+        app:layout_constraintEnd_toEndOf="@+id/btnElectronics"
+        app:layout_constraintStart_toStartOf="@+id/btnElectronics"
+        app:layout_constraintTop_toBottomOf="@+id/btnElectronics" />
+
+    <Button
+        android:id="@+id/btnBGLocos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="B G Locos"
+        app:layout_constraintEnd_toEndOf="@+id/btnFloatingCraftsSection"
+        app:layout_constraintStart_toStartOf="@+id/btnFloatingCraftsSection"
+        app:layout_constraintTop_toBottomOf="@+id/btnFloatingCraftsSection" />
+
+    <Button
+        android:id="@+id/btnPumpHouse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Pump Houses"
+        app:layout_constraintEnd_toEndOf="@+id/btnBGLocos"
+        app:layout_constraintStart_toStartOf="@+id/btnBGLocos"
+        app:layout_constraintTop_toBottomOf="@+id/btnBGLocos" />
+
+    <Button
+        android:id="@+id/btnCranes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Cranes"
+        app:layout_constraintEnd_toEndOf="@+id/btnPumpHouse"
+        app:layout_constraintStart_toStartOf="@+id/btnPumpHouse"
+        app:layout_constraintTop_toBottomOf="@+id/btnPumpHouse" />
+
+    <Button
+        android:id="@+id/btnPowerDistribution"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="power distribution"
+        app:layout_constraintEnd_toEndOf="@+id/btnCranes"
+        app:layout_constraintStart_toStartOf="@+id/btnCranes"
+        app:layout_constraintTop_toBottomOf="@+id/btnCranes" />
+
+    <Button
+        android:id="@+id/btnlighting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="lighting"
+        app:layout_constraintEnd_toEndOf="@+id/btnPowerDistribution"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="@+id/btnPowerDistribution"
+        app:layout_constraintTop_toBottomOf="@+id/btnPowerDistribution" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="20dp" />
 </android.support.constraint.ConstraintLayout>
