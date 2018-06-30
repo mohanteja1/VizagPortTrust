@@ -63,14 +63,40 @@ public class ElectronicsAdapter extends RecyclerView.Adapter<ElectronicsViewHold
     }
 
     public  void loadNewData(List<Cameras> newPhotos) {
+      //  clear(newPhotos);
         mCameraList = newPhotos;
         notifyDataSetChanged();
     }
+
+    public void clear(List<Cameras> newPhotos){
+        Log.d(TAG, "clear: clearing list");
+        final int size =mCameraList.size();
+
+        if(size > 0){
+            for (int i =0; i<size;i++)
+            {
+                mCameraList.remove(0);
+            }
+        }
+
+        notifyItemRangeRemoved(0, size);
+        Log.d(TAG, "clear: removed =" + mCameraList.isEmpty());
+
+    }
+
 
     public Cameras getPhoto(int position) {
         return (null != mCameraList ? mCameraList.get(position) : null);
     }
 
 
+    @Override
+    public int getItemViewType(int position) {
+        return position;
+    }
 
+    @Override
+    public long getItemId(int position) {
+        return position;
+    }
 }

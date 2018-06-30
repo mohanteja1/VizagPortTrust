@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/fcs_tugs"
+        android:title="TUGS" />
+    <item
+        android:id="@+id/fcs_floating_cranes"
+        android:title="FLOATING CRANES" />
+    <item
+        android:id="@+id/fcs_dredger"
+        android:title="DREDGER" />
+    <item
+        android:id="@+id/fcs_pilot_launches"
+        android:title="PILOT LAUNCHES" />
+    <item
+        android:id="@+id/fcs_mooringlaunches"
+        android:title="MOORING LAUNCHES" />
+    <item
+        android:id="@+id/fcs_vip"
+        android:title="VIP LAUNCHES" />
+    <item
+        android:id="@+id/fcs_oil"
+        android:title="OIL BARGE" />
+    <item
+        android:id="@+id/fcs_survey"
+        android:title="SURVEY LAUNCHES" />
+    <item
+        android:id="@+id/fcs_firefloat"
+        android:title="FIRE FLOAT" />
+    <item
+        android:id="@+id/fcs_pollution"
+        android:title="POLLUTION CRAFT" />
+</menu>

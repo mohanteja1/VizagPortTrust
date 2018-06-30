@@ -22,7 +22,8 @@ public class ElectronicsActivity extends AppCompatActivity{
     private List<Cameras> mPhotoList = new ArrayList<Cameras>();
     private RecyclerView mRecyclerView;
     private ElectronicsAdapter electronicsAdapter;
-
+    public String jsonPage ="video_surveillance_cameras.php"; //default page
+    private int pageIndex =2;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -58,13 +59,60 @@ public class ElectronicsActivity extends AppCompatActivity{
     }
 
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+
+        getMenuInflater().inflate(R.menu.electronic_menu, menu);
+        return super.onCreateOptionsMenu(menu);
+
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id= item.getItemId();
+        switch (id){
+            case R.id.detailedStatusMenuItem:
+                jsonPage="video_surveillance_cameras.php";
+                pageIndex=2;
+                onResume();
+                break;
+            case R.id.railwayMenuItem:
+                jsonPage="railway_weighbridges.php";
+                pageIndex=3;
+                onResume();
+                break;
+            case R.id.truckMenuItem:
+                jsonPage="truck_weighbridges.php";
+                pageIndex=4;
+                onResume();
+                break;
+            case R.id.radioNavigationMenuItem:
+                jsonPage="radio_navigation_aids.php";
+                pageIndex=5;
+                onResume();
+                break;
+            case R.id.rdeStationMenuItem:
+                jsonPage="rde_station.php";
+                pageIndex=6;
+                onResume();
+                break;
+            case R.id.rfidMenuItem:
+                jsonPage="rfid.php";
+                pageIndex=7;
+                onResume();
+                break;
+             default:
+                 jsonPage="video_surveillance_cameras.php";
+                 pageIndex=2;
+                 onResume();
+        }
+        return super.onOptionsItemSelected(item);
+    }
 
     @Override
     protected void onResume() {
         super.onResume();
-
-            String jsonPage ="video_surveillance_cameras.php";
-            ProcessPhotos processPhotos = new ProcessPhotos(jsonPage, true);
+            ProcessPhotos processPhotos = new ProcessPhotos(jsonPage, pageIndex);
             processPhotos.execute();
 
     }
@@ -77,8 +125,8 @@ public class ElectronicsActivity extends AppCompatActivity{
 
     public class ProcessPhotos extends GetElectronicsJson {
 
-        public ProcessPhotos(String searchCriteria, boolean matchAll) {
-            super(searchCriteria, matchAll);
+        public ProcessPhotos(String searchCriteria, int pageIndex) {
+            super(searchCriteria, pageIndex);
         }
 
         public void execute() {
@@ -92,7 +140,7 @@ public class ElectronicsActivity extends AppCompatActivity{
 
             protected void onPostExecute(String webData) {
                 super.onPostExecute(webData);
-                electronicsAdapter.loadNewData(getPhotos());
+                electronicsAdapter.loadNewData(getmCameras());
             }
 
         }

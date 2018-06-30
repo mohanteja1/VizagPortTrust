@@ -34,6 +34,8 @@ public class MainActivity extends AppCompatActivity {
         btnBGLocos.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Intent intent =new Intent(getApplicationContext(),BGLocosActivity.class);
+                startActivity(intent);
 
             }
         });
@@ -41,13 +43,16 @@ public class MainActivity extends AppCompatActivity {
         btnCranes.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent intent =new Intent(getApplicationContext(),CraneActivity.class);
+                startActivity(intent);
             }
         });
 
          btnFloatingCraftSection.setOnClickListener(new View.OnClickListener() {
              @Override
              public void onClick(View v) {
+                 Intent intent =new Intent(getApplicationContext(),FCSActivity.class);
+                 startActivity(intent);
 
              }
          });
@@ -55,6 +60,8 @@ public class MainActivity extends AppCompatActivity {
          btnLighting.setOnClickListener(new View.OnClickListener() {
              @Override
              public void onClick(View v) {
+                 Intent intent =new Intent(getApplicationContext(),LightingActivity.class);
+                 startActivity(intent);
 
              }
          });
@@ -62,6 +69,8 @@ public class MainActivity extends AppCompatActivity {
          btnPowerDistribution.setOnClickListener(new View.OnClickListener() {
              @Override
              public void onClick(View v) {
+                 Intent intent =new Intent(getApplicationContext(),PowerHouseActivity.class);
+                 startActivity(intent);
 
              }
          });
@@ -69,7 +78,8 @@ public class MainActivity extends AppCompatActivity {
          btnPumpHouse.setOnClickListener(new View.OnClickListener() {
              @Override
              public void onClick(View v) {
-
+                 Intent intent =new Intent(getApplicationContext(),PumpHouseActivity.class);
+                 startActivity(intent);
              }
          });
 

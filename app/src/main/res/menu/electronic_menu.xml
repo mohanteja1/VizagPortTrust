@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/detailedStatusMenuItem"
+        android:title="Detailed Status" />
+    <item
+        android:id="@+id/railwayMenuItem"
+        android:title="Railway Weigh Bridge" />
+    <item
+        android:id="@+id/truckMenuItem"
+        android:title="Truck Weigh Bridge" />
+    <item
+        android:id="@+id/radioNavigationMenuItem"
+        android:title="Radio Navigational Aids" />
+    <item
+        android:id="@+id/rdeStationMenuItem"
+        android:title="RDE Station" />
+    <item
+        android:id="@+id/rfidMenuItem"
+        android:title="RFID" />
+</menu>
