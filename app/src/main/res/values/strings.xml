@@ -2,4 +2,8 @@
     <string name="app_name">Vizag Port Trust</string>
     <string name="title_activity_bglocos">BGLocos</string>
     <string name="title_activity_fcs">FCSActivity</string>
+
+    <string name="title_activity_fullscreen">FullscreenActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
 </resources>

@@ -14,6 +14,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         Button btnElectronics= (Button) findViewById(R.id.btnElectronics);
         Button btnCranes= (Button) findViewById(R.id.btnCranes);
         Button btnFloatingCraftSection= (Button) findViewById(R.id.btnFloatingCraftsSection);
@@ -21,6 +22,8 @@ public class MainActivity extends AppCompatActivity {
         Button btnPowerDistribution= (Button) findViewById(R.id.btnPowerDistribution);
         Button btnPumpHouse= (Button) findViewById(R.id.btnPumpHouse);
         Button btnLighting= (Button) findViewById(R.id.btnlighting);
+
+
 
         btnElectronics.setOnClickListener(new View.OnClickListener() {
             @Override

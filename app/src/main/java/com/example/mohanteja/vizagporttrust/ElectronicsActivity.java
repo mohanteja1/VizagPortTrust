@@ -5,12 +5,14 @@ import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -22,13 +24,15 @@ public class ElectronicsActivity extends AppCompatActivity{
     private List<Cameras> mPhotoList = new ArrayList<Cameras>();
     private RecyclerView mRecyclerView;
     private ElectronicsAdapter electronicsAdapter;
+    private TextView menuOpt ;
     public String jsonPage ="video_surveillance_cameras.php"; //default page
     private int pageIndex =2;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_electronics);
-
+        menuOpt = findViewById(R.id.electronicsMnuOpt);
+        menuOpt.setText("detailed status");
 //        activateToolbar();
 
         mRecyclerView = (RecyclerView) findViewById(R.id.electronicsRecyclerView1);
@@ -38,6 +42,13 @@ public class ElectronicsActivity extends AppCompatActivity{
                 new ArrayList<Cameras>());
 
         mRecyclerView.setAdapter(electronicsAdapter);
+
+        RecyclerView.ItemAnimator itemAnimator = new DefaultItemAnimator();
+        itemAnimator.setAddDuration(1000);
+        itemAnimator.setRemoveDuration(1000);
+        mRecyclerView.setItemAnimator(itemAnimator);
+
+
 
 //        mRecyclerView.addOnItemTouchListener(new RecyclerItemClickListener(this,
 //                mRecyclerView, new RecyclerItemClickListener.OnItemClickListener() {
@@ -74,36 +85,45 @@ public class ElectronicsActivity extends AppCompatActivity{
             case R.id.detailedStatusMenuItem:
                 jsonPage="video_surveillance_cameras.php";
                 pageIndex=2;
+                menuOpt.setText("detailed status");
                 onResume();
                 break;
             case R.id.railwayMenuItem:
                 jsonPage="railway_weighbridges.php";
                 pageIndex=3;
+                menuOpt.setText("railway weighbridge");
                 onResume();
                 break;
             case R.id.truckMenuItem:
                 jsonPage="truck_weighbridges.php";
                 pageIndex=4;
+                menuOpt.setText("truck_weighbridges");
                 onResume();
                 break;
             case R.id.radioNavigationMenuItem:
                 jsonPage="radio_navigation_aids.php";
+                menuOpt.setText("radio_navigation_aids");
                 pageIndex=5;
                 onResume();
                 break;
             case R.id.rdeStationMenuItem:
                 jsonPage="rde_station.php";
                 pageIndex=6;
+                menuOpt.setText("rde_station");
+
                 onResume();
                 break;
             case R.id.rfidMenuItem:
                 jsonPage="rfid.php";
                 pageIndex=7;
+                menuOpt.setText("rfid");
+
                 onResume();
                 break;
              default:
                  jsonPage="video_surveillance_cameras.php";
                  pageIndex=2;
+                 menuOpt.setText("detailed status");
                  onResume();
         }
         return super.onOptionsItemSelected(item);

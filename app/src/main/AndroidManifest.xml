@@ -13,20 +13,42 @@
         android:theme="@style/AppTheme">
 
         <!-- Main activity -->
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ElectronicsActivity" />
-        <activity android:name=".BGLocosActivity" />
-        <activity android:name=".PowerHouseActivity" />
-        <activity android:name=".FCSActivity" />
-        <activity android:name=".LightingActivity" />
-        <activity android:name=".CraneActivity" />
-        <activity android:name=".PumpHouseActivity"></activity>
+
+
+
+        <activity
+            android:name=".ElectronicsActivity"
+            android:label="ELECTRONICS" />
+
+
+        <activity android:name=".BGLocosActivity"
+            android:label="BG LOCOS"/>
+
+        <activity android:name=".PowerHouseActivity"
+            android:label="POWER DISTRIBUTION"/>
+
+        <activity android:name=".FCSActivity"
+            android:label="FLOATING CRAFT SECTION"/>
+
+        <activity android:name=".LightingActivity"
+            android:label="LIGHTING"/>
+        <activity android:name=".CraneActivity"
+            android:label="CRANES"/>
+        <activity android:name=".PumpHouseActivity"
+            android:label="PUMP HOUSE"/>
+
+
+
     </application>
+
+
 
 </manifest>

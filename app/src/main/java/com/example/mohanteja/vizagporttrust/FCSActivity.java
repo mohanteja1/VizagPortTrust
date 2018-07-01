@@ -12,6 +12,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,15 +22,18 @@ public class FCSActivity extends AppCompatActivity {
     private List<FcsEachCraftItem> fcsEachCraftItemList = new ArrayList<FcsEachCraftItem>();
     private RecyclerView mRecyclerView;
     private FcsRecyclerAdapter fcsRecyclerAdapter;
-    public String jsonPage ="fcs_tugs_details.php"; //default page
-    private int pageIndex =9;
+    public String jsonPage = "fcs_tugs_details.php"; //default page
+    private int pageIndex = 9;
+    private TextView mnuOpt;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fcs);
 
+        mnuOpt = findViewById(R.id.fcsMnuOpt);
 //        activateToolbar();
-
+        mnuOpt.setText("tugs");
         mRecyclerView = (RecyclerView) findViewById(R.id.fcsRecyclerView);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
         mRecyclerView.getRecycledViewPool().setMaxRecycledViews(0, 0);
@@ -69,61 +73,72 @@ public class FCSActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        int id= item.getItemId();
-        switch (id){
+        int id = item.getItemId();
+        switch (id) {
             case R.id.fcs_tugs:
-                jsonPage="fcs_tugs_details.php";
-                pageIndex=9;
+                jsonPage = "fcs_tugs_details.php";
+                pageIndex = 9;
+                mnuOpt.setText("tugs");
                 onResume();
                 break;
             case R.id.fcs_floating_cranes:
-                jsonPage="fcs_floating_cranes.php";
-                pageIndex=10;
+                jsonPage = "fcs_floating_cranes.php";
+                pageIndex = 10;
+                mnuOpt.setText("floating cranes");
                 onResume();
                 break;
             case R.id.fcs_dredger:
-                jsonPage="fcs_dredger.php";
-                pageIndex=11;
+                jsonPage = "fcs_dredger.php";
+                pageIndex = 11;
+                mnuOpt.setText("dredger ");
                 onResume();
                 break;
             case R.id.fcs_pilot_launches:
-                jsonPage="fcs_pilot_launches.php";
-                pageIndex=12;
+                jsonPage = "fcs_pilot_launches.php";
+                pageIndex = 12;
+                mnuOpt.setText("pilot launches");
                 onResume();
                 break;
             case R.id.fcs_mooringlaunches:
-                jsonPage="fcs_mooring_launches.php";
-                pageIndex=13;
+                jsonPage = "fcs_mooring_launches.php";
+                pageIndex = 13;
+                mnuOpt.setText("mooring launches");
                 onResume();
                 break;
             case R.id.fcs_vip:
-                jsonPage="fcs_vip_launch.php";
-                pageIndex=14;
+                jsonPage = "fcs_vip_launch.php";
+                pageIndex = 14;
+                mnuOpt.setText("vip launch");
                 onResume();
                 break;
             case R.id.fcs_oil:
-                jsonPage="fcs_oil_barage.php";
-                pageIndex=15;
+                jsonPage = "fcs_oil_barage.php";
+                pageIndex = 15;
+                mnuOpt.setText("oil barage");
                 onResume();
                 break;
             case R.id.fcs_survey:
-                jsonPage="fcs_survey_launch.php";
-                pageIndex=16;
+                jsonPage = "fcs_survey_launch.php";
+                pageIndex = 16;
+                mnuOpt.setText("survey launch");
                 onResume();
                 break;
             case R.id.fcs_firefloat:
-                jsonPage="fcs_fire_float.php";
-                pageIndex=17;
+                jsonPage = "fcs_fire_float.php";
+                pageIndex = 17;
+                mnuOpt.setText("fire float");
                 onResume();
                 break;
             case R.id.fcs_pollution:
-                jsonPage="fcs_pollution_craft.php";
-                pageIndex=18;
+                jsonPage = "fcs_pollution_craft.php";
+                pageIndex = 18;
+                mnuOpt.setText("pollution craft");
                 onResume();
                 break;
             default:
-                jsonPage="fcs_pollution_craft.php";
-                pageIndex=18;
+                jsonPage = "fcs_tugs_details.php";
+                pageIndex = 18;
+                mnuOpt.setText("tugs");
                 onResume();
                 break;
         }
