@@ -117,7 +117,6 @@ public class ElectronicsActivity extends AppCompatActivity{
                 jsonPage="rfid.php";
                 pageIndex=7;
                 menuOpt.setText("rfid");
-
                 onResume();
                 break;
              default:
