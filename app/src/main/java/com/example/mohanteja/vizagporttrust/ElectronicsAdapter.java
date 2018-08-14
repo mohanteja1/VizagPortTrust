@@ -40,11 +40,7 @@ public class ElectronicsAdapter extends RecyclerView.Adapter<ElectronicsViewHold
 
         Cameras camerasItem = mCameraList.get(i);
         Log.d(LOG_TAG,"Processing: " + camerasItem.getLocation() + "==> " + Integer.toString(i));
-//        Picasso.with(mContext).load(photoItem.getImage())
-//                .error(R.drawable.placeholder)
-//                .placeholder(R.drawable.placeholder)
-//                .into(flickrImageViewHolder.thumbnail);
-//        flickrImageViewHolder.title.setText(photoItem.getTitle());
+
 
         electronicsViewHolder.electronicsLocationTextView.setText(camerasItem.getLocation());
         electronicsViewHolder.electronicsRemarksTextView.setText("Remarks:" + camerasItem.getRemarks());

@@ -50,23 +50,23 @@ public class ElectronicsActivity extends AppCompatActivity{
 
 
 
-//        mRecyclerView.addOnItemTouchListener(new RecyclerItemClickListener(this,
-//                mRecyclerView, new RecyclerItemClickListener.OnItemClickListener() {
-//            @Override
-//            public void onItemClick(View view, int position) {
-//
-//                Toast.makeText(MainActivity.this, "Normal tap", Toast.LENGTH_SHORT).show();
-//            }
-//
-//            @Override
-//            public void onItemLongClick(View view, int position) {
-//
-////                Toast.makeText(MainActivity.this, "Long tap", Toast.LENGTH_SHORT).show();
-//                Intent intent = new Intent(MainActivity.this, ViewPhotoDetailsActivity.class);
-//                intent.putExtra(PHOTO_TRANSFER, flickrRecyblerViewAdapter.getPhoto(position));
-//                startActivity(intent);
-//            }
-//        }));
+        mRecyclerView.addOnItemTouchListener(new RecyclerItemClickListener(this,
+                mRecyclerView, new RecyclerItemClickListener.OnItemClickListener() {
+            @Override
+            public void onItemClick(View view, int position) {
+
+                Toast.makeText(ElectronicsActivity.this, "Normal tap", Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onItemLongClick(View view, int position) {
+
+                Toast.makeText(ElectronicsActivity.this, "Long tap", Toast.LENGTH_SHORT).show();
+             //   Intent intent = new Intent(ElectronicsActivity.this, ViewPhotoDetailsActivity.class);
+             //   intent.putExtra(PHOTO_TRANSFER, flickrRecyblerViewAdapter.getPhoto(position));
+               // startActivity(intent);
+            }
+        }));
     }
 
 
@@ -145,12 +145,15 @@ public class ElectronicsActivity extends AppCompatActivity{
     public class ProcessPhotos extends GetElectronicsJson {
 
         public ProcessPhotos(String searchCriteria, int pageIndex) {
-            super(searchCriteria, pageIndex);
+            super(searchCriteria, pageIndex); //initializes Getjson object ie ProcessPhotos
         }
 
         public void execute() {
-            super.execute();
+            super.execute();    //calls executes method in Getjson class .this calls DownloadRawdata in GetData class and downloads data
+
+            //this creates the object of class below only
             ProcessData processData = new ProcessData();
+            //this direct goes to ProcessData.onPostExecute
             processData.execute();
 
         }

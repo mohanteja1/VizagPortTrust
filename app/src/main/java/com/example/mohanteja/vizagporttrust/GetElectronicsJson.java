@@ -72,7 +72,7 @@ public class GetElectronicsJson extends GetRawData {
     //url
     private Uri mDestinationUri;
 
-    //---------constructor-----------------------------
+    //---------constructor-----------------------------just initializes the respective array
     public GetElectronicsJson(String jsonpage, int pageIndex) {
 
         super(null);
