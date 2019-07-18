@@ -15,4 +15,12 @@ check documentation and ppt available in screenshots folder.
 
 ## layout tree
 
-![layout tree](screenshots/layouttree.png)
+![layout tree](screenshots/LayoutTree.png)
+
+## cameras layout 
+
+![cameras layour](screenshots/app/camerasMenu.png)
+
+## Power distribution layout
+
+![power distribution layout](screenshots/app/powerdistribution.png)
