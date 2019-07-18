@@ -9,5 +9,5 @@ This functionality reduces visiting database through Myphpadmin for editing when
 for more info:
 check documentation and ppt available in screenshots folder.
 
-
+![class diagram](screenshots/classdiagramComplete.png)
 
