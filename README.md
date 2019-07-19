@@ -1,5 +1,5 @@
 # VizagPortTrust
-ANDROID APP DONE DURING SUMMER INTERNSHIP
+ANDROID APP DONE DURING SUMMER INTERNSHIP IN MY 3-2
 
 This App displays the machinery status in vishakapatnam port on real time data either input by POs in shift through this app  or through website by admin on request.
 
