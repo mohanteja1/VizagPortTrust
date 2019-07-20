@@ -15,12 +15,18 @@ check documentation and ppt available in screenshots folder.
 
 ## layout tree
 
-![layout tree](screenshots/LayoutTree.png)
+<p align="center">
+<img src= "screenshots/LayoutTree.png"  width = "40%" height = "40%" >
+</p>
 
 ## cameras layout 
 
-![cameras layour](screenshots/app/camerasMenu.png)
+<p align="center">
+<img src= "screenshots/app/camerasMenu.png"  width = "40%" height = "40%" >
+</p>
 
 ## Power distribution layout
 
-![power distribution layout](screenshots/app/powerdistribution.png)
+<p align="center">
+<img src= "screenshots/app/powerdistribution.png"  width = "40%" height = "40%" >
+</p>
