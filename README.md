@@ -16,7 +16,7 @@ check documentation and ppt available in screenshots folder.
 ## layout tree
 
 <p align="center">
-<img src= "screenshots/LayoutTree.png"  width = "40%" height = "40%" >
+<img src= "screenshots/LayoutTree.png"  width = "100%" height = "100%" >
 </p>
 
 ## cameras layout 
